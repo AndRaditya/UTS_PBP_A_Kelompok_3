@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Project_UTS_PBP</string>
+    <string name="anak">Anak</string>
+    <string name="mata">Mata</string>
+    <string name="noor_hidayati_dr_sp_a">Noor Hidayati, DR, Sp. A</string>
 </resources>

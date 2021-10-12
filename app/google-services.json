@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "912190126303",
+    "project_id": "project-uts-pbp",
+    "storage_bucket": "project-uts-pbp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912190126303:android:cbf89095f491bcf9a0516a",
+        "android_client_info": {
+          "package_name": "com.example.gd6_geolocation_a_10144"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912190126303-vscnh9feapnopo3rtdbjg83q3ibk87ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHjUehFGWNH_x-NJpJA-ewGEk13DYDLMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912190126303-vscnh9feapnopo3rtdbjg83q3ibk87ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
