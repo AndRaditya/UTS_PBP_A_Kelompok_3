@@ -3,4 +3,9 @@
     <string name="anak">Anak</string>
     <string name="mata">Mata</string>
     <string name="noor_hidayati_dr_sp_a">Noor Hidayati, DR, Sp. A</string>
+    <string name="nama_lengkap">Nama Lengkap</string>
+    <string name="nomor_telepon">Nomor Telepon</string>
+    <string name="email">Email</string>
+    <string name="atma_jaya_makassar">ATMA JAYA MAKASSAR</string>
+    <string name="rumah_sakit">RUMAH SAKIT</string>
 </resources>
