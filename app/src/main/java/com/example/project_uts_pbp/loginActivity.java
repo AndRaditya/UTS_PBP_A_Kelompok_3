@@ -25,9 +25,7 @@ public class loginActivity extends AppCompatActivity {
 
         etUsername = findViewById(R.id.loginEmail);
         etPassword = findViewById(R.id.loginPassword);
-
         btnLogin = findViewById(R.id.btnLogin);
-        btnLoginKeRegister = findViewById(R.id.btnLoginKeRegister);
 
         checkLogin();
 
@@ -61,7 +59,7 @@ public class loginActivity extends AppCompatActivity {
 
     private void checkLogin(){
         if(userPreferences.checkLogin()){
-            startActivity(new Intent(loginActivity.this, MainActivity.class));
+            startActivity(new Intent(loginActivity.this, homeAplikasi.class));
             finish();
         }
     }

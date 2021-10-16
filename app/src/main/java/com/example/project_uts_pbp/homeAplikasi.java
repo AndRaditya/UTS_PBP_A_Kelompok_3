@@ -2,47 +2,70 @@
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.example.project_uts_pbp.Adapter.PendaftaranAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.example.project_uts_pbp.databinding.ActivityMainBinding;
 
-import com.example.project_uts_pbp.profilRS;
+ public class homeAplikasi extends AppCompatActivity {
 
-public class homeAplikasi extends AppCompatActivity {
-
-    ActivityMainBinding binding;
-    private ImageButton btnHome;
+    private ImageButton btnEmergency, btnDaftar,
+            btnLayananDokter, btnJadwalAnda, btnProfilRumahSakit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        
-        ActivityMainBinding binding;
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.homeAplikasi);
-        binding.setActivity(this);
 
-        btnHome = findViewById(R.id.btnHome);
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        // bottomNavigationView.setSelectedItemId(R.id.todolist);
-        bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+        btnEmergency = findViewById(R.id.btnEmergency);
+        btnDaftar = findViewById(R.id.btnDaftar);
+        btnJadwalAnda = findViewById(R.id.btnJadwalAnda);
+        btnLayananDokter = findViewById(R.id.btnLayananDokter);
+        btnProfilRumahSakit = findViewById(R.id.btnProfilRumahSakit);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation); /*masih error*/
+        // bottomNavigationView.setSelectedItemId(R.id.profileMenu);
+        // bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
-        btnHome.setOnClickListener(new View.OnClickListener() {
+        btnProfilRumahSakit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent moveProfil = new Intent(homeAplikasi.this, profilRS.class);
-                homeAplikasi.this.startActivity(moveProfil);
-
+                startActivity(new Intent(homeAplikasi.this, profilRS.class));
+                finish();
             }
-
         });
+        btnDaftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(homeAplikasi.this, InputDataPendaftaran.class));
+                finish();
+            }
+        });
+        btnJadwalAnda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(homeAplikasi.this, PendaftaranAdapter.class));
+                finish();
+            }
+        });
+//        btnLayananDokter.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(homeAplikasi.this, profilRS.class));
+//                finish();
+//            }
+//        });
+        btnEmergency.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(homeAplikasi.this, emergencyGeolocation.class));
+                finish();
+            }
+        });
+
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =

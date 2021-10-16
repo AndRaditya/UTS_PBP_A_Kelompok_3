@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:hint="abc@xxx.com"/>
+        android:hint="Masukkan Email Anda"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -54,19 +54,6 @@
         android:layout_gravity="center"
         android:id="@+id/btnLogin"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Belum Punya Akun?"
-        android:textColor="@color/black"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="Daftar"
-        android:layout_gravity="center"
-        android:id="@+id/btnLoginKeRegister"/>
 
 </LinearLayout>

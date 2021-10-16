@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<FrameLayout
 xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:mapbox="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context=".Geolocation">
+tools:context=".emergencyGeolocation">
 
-<com.mapbox.mapboxsdk.maps.MapView
-    android:id="@+id/mapView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    mapbox:mapbox_cameraTargetLat="40.73581"
-    mapbox:mapbox_cameraTargetLng="-73.99155"
-    mapbox:mapbox_cameraZoom="11" />
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="40.73581"
+        mapbox:mapbox_cameraTargetLng="-73.99155"
+        mapbox:mapbox_cameraZoom="11" />
+
+    <Button
+        android:layout_width="500px"
+        android:layout_height="150px"
+        android:layout_gravity="center"
+        android:layout_marginTop="250dp"
+        android:text="Back"
+        android:backgroundTint="@color/teal_700"
+        android:id="@+id/buttonBackGeolocation"
+        android:textColor="@color/white"/>
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -32,4 +42,4 @@ tools:context=".Geolocation">
         app:menu="@menu/bottom_nav_menu" />
 </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
