@@ -1,28 +1,28 @@
- package com.example.project_uts_pbp;
+package com.example.project_uts_pbp.Database;
+
 import android.content.Context;
-
-import androidx.room.Database;
 import androidx.room.Room;
+import com.example.project_uts_pbp.Database.AppDatabase;
 
-public class databaseTodo {
+public class DatabasePendaftaran {
     private Context context;
-    private static databaseTodo databaseTodo;
+    private static DatabasePendaftaran databasePendaftaran;
 
-    private appDatabase database;
+    private AppDatabase database;
 
-    public databaseTodo(Context context){
+    public DatabasePendaftaran(Context context){
         this.context = context;
-        database = Room.databaseBuilder(context, appDatabase.class, "todo").allowMainThreadQueries().build();
+        database = Room.databaseBuilder(context, AppDatabase.class, "pendaftaran").allowMainThreadQueries().build();
     }
 
-    public static synchronized databaseTodo getInstance(Context context){
-        if (databaseTodo==null){
-            databaseTodo = new databaseTodo(context);
+    public static synchronized DatabasePendaftaran getInstance(Context context){
+        if (databasePendaftaran==null){
+            databasePendaftaran = new DatabasePendaftaran(context);
         }
-        return databaseTodo;
+        return databasePendaftaran;
     }
 
-    public appDatabase getDatabase(){
+    public AppDatabase getDatabase(){
         return database;
     }
 }

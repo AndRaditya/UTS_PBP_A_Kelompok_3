@@ -1,27 +1,26 @@
-package com.example.project_uts_pbp.dao;
+package com.example.project_uts_pbp.Dao;
 
 import androidx.room.Dao;
-import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
-import androidx.room.Update;
 
-import com.example.project_uts_pbp.model.user;
+import com.example.project_uts_pbp.Model.Pendaftaran;
+import com.example.project_uts_pbp.Model.user;
 
 import java.util.List;
 
 @Dao
-public interface ProfileDao {
-    @Query("SELECT * FROM todo")
-    List<user> getAll();
+public interface PendaftaranDao {
+    @Query("SELECT * FROM pendaftaran")
+    List<Pendaftaran> getAll();
 
     @Insert
-    void insertTodo(Todo todo);
+    void insertTodo(Pendaftaran pendaftaran);
 
-    @Update
-    void updateTodo(Todo todo);
-
-    @Delete
-    void deleteTodo(Todo todo);
+//    @Update
+//    void updateTodo(Todo todo);
+//
+//    @Delete
+//    void deleteTodo(Todo todo);
 
 }

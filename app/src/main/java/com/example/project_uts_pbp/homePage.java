@@ -14,7 +14,7 @@ public class homePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.welcome_page);
 
         buttonLogin = findViewById(R.id.buttonLogin);
 

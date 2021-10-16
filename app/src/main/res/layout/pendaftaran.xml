@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_marginTop="10dp"
@@ -108,14 +105,14 @@
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:layout_marginTop="20dp"
-        android:text="Dokter"/>
+        android:text="Kategori Penyakit"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:id="@+id/dokter"
-        android:hint="Pilih Dokter"/>
+        android:id="@+id/kategoriPenyakit"
+        android:hint="Masukkan Kategori Penyakit"/>
 
     <Button
         android:id="@+id/btnDaftarOnline"

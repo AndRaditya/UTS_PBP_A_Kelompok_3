@@ -1,12 +1,12 @@
-package com.example.project_uts_pbp;
+package com.example.project_uts_pbp.Database;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
-import com.example.room_a_0070.dao.profileDao;
-import com.example.room_a_0070.model.user;
+import com.example.project_uts_pbp.Model.Pendaftaran;
+import com.example.project_uts_pbp.Dao.PendaftaranDao;
 
-@Database(entities = {user.class }, version = 1)
-public abstract class appDatabase extends RoomDatabase {
-    public abstract profileDao profileDao();
+@Database(entities = {Pendaftaran.class}, version = 1)
+public abstract class AppDatabase extends RoomDatabase {
+    public abstract PendaftaranDao pendaftaranDao();
 }

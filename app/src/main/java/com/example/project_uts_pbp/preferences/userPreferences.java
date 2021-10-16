@@ -3,7 +3,7 @@ package com.example.project_uts_pbp.preferences;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.project_uts_pbp.model.user;
+import com.example.project_uts_pbp.Model.user;
 
 public class userPreferences {
     SharedPreferences sharedPreferences;

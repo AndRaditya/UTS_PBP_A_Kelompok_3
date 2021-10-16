@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_marginBottom="16dp">
 
     <LinearLayout
         android:layout_width="380dp"
         android:layout_height="190dp"
         android:background="#F5F5F5"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:layout_marginTop="-200dp">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
                     android:layout_marginLeft="8dp"
                     android:textStyle="bold"
                     android:textSize="18dp"
-                    android:id="@+id/textPeriksaJadwalAnda"
+                    android:id="@+id/txtKategoriPenyakit"
                     android:textColor="@color/black"/>
             </LinearLayout>
 
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:textSize="16dp"
-                android:id="@+id/textDokterJadwalAnda"
+                android:text="Noor Hidayati, DR, Sp. A"
                 android:textColor="@color/black"/>
 
             <LinearLayout
@@ -99,20 +99,4 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_nav_menu" />
-    </LinearLayout>
-</FrameLayout>
+</LinearLayout>

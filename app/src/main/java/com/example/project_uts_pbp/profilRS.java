@@ -10,7 +10,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class profilRS extends AppCompatActivity {
 
-    
+    @Override
+    public void setTitle(int titleId) {
+        super.setTitle(titleId);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +22,7 @@ public class profilRS extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         // bottomNavigationView.setSelectedItemId(R.id.todolist);
-        bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
+//        bottomNavigationView.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
