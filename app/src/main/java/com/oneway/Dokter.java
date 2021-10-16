@@ -2,6 +2,7 @@ package com.example.project_uts_pbp;
 
 public class Dokter    {
 
+    public String namadokter;
     public String poliklinik;
     public String minggu;
     public String senin;
@@ -13,10 +14,11 @@ public class Dokter    {
     public String shift;
 
 
-    public Pegawai(String poliklinik, String minggu, String senin, String selasa, String rabu, String kamis, String jumat,
+    public Pegawai(String namadokter, String poliklinik, String minggu, String senin, String selasa, String rabu, String kamis, String jumat,
                     String sabtu, String shift)
 
-    {
+    {   
+        this.namadokter = namadokter;
         this.poliklinik = poliklinik;
         this.minggu = minggu;
         this.senin = senin;
@@ -29,6 +31,9 @@ public class Dokter    {
 
     }
 
+    public String getNamadokter()  {return namadokter; }
+
+    public void setNamadokter(String namadokter) { this.namadokter= namadokter; }
 
     public String getPoliklinik()  {return poliklinik; }
 
@@ -44,27 +49,27 @@ public class Dokter    {
 
     public String getSelasa()  {return selasa; }
 
-    public void setSelasa(String minggu) { this.minggu= minggu; }
+    public void setSelasa(String selasa) { this.selasa=selasa; }
 
-    public String getMinggu()  {return minggu; }
+    public String getRabu()  {return rabu; }
 
-    public void setMinggu(String minggu) { this.minggu= minggu; }
+    public void setRabu(String rabu) { this.rabu= rabu; }
 
-    public String getMinggu()  {return minggu; }
+    public String getKamis()  {return kamis; }
 
-    public void setMinggu(String minggu) { this.minggu= minggu; }
+    public void setKamis(String kamis) { this.kamis= kamis; }
 
-    public String getMinggu()  {return minggu; }
+    public String getJumat()  {return jumat; }
 
-    public void setMinggu(String minggu) { this.minggu= minggu; }
+    public void setJumat(String jumat) { this.jumat= jumat; }
 
-    public String getMinggu()  {return minggu; }
+    public String getSabtu()  {return sabtu; }
 
-    public void setMinggu(String minggu) { this.minggu= minggu; }
+    public void setSabtu(String sabtu) { this.sabtu= sabtu; }
 
-    public String getMinggu()  {return minggu; }
+    public String getShift()  {return shift; }
 
-    public void setMinggu(String minggu) { this.minggu= minggu; }
+    public void setShift(String shift) { this.shift= shift; }
 
     
 
