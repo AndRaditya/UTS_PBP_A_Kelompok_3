@@ -5,7 +5,6 @@ import androidx.room.Insert;
 import androidx.room.Query;
 
 import com.example.project_uts_pbp.Model.Pendaftaran;
-import com.example.project_uts_pbp.Model.user;
 
 import java.util.List;
 

@@ -8,20 +8,20 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.project_uts_pbp.preferences.userPreferences;
+import com.example.project_uts_pbp.Preferences.UserPreferences;
 import com.google.android.material.button.MaterialButton;
 
 public class loginActivity extends AppCompatActivity {
     private EditText etUsername, etPassword;
     private MaterialButton btnLoginKeRegister, btnLogin;
-    private com.example.project_uts_pbp.preferences.userPreferences userPreferences;
+    private UserPreferences userPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        userPreferences = new userPreferences(loginActivity.this);
+        userPreferences = new UserPreferences(loginActivity.this);
 
         etUsername = findViewById(R.id.loginEmail);
         etPassword = findViewById(R.id.loginPassword);
@@ -37,6 +37,10 @@ public class loginActivity extends AppCompatActivity {
                 if (validateForm()) {
                     if(etUsername.getText().toString().trim().equals("arya@gmail.com")
                             && etPassword.getText().toString().trim().equals("arya")){
+                        userPreferences.setLogin(etUsername.getText().toString().trim(), etPassword.getText().toString().trim());
+                        checkLogin();
+                    }else if(etUsername.getText().toString().trim().equals("jona@gmail.com")
+                            && etPassword.getText().toString().trim().equals("jona")){
                         userPreferences.setLogin(etUsername.getText().toString().trim(), etPassword.getText().toString().trim());
                         checkLogin();
                     }else{

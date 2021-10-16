@@ -1,11 +1,11 @@
-package com.example.project_uts_pbp.preferences;
+package com.example.project_uts_pbp.Preferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.project_uts_pbp.Model.user;
+import com.example.project_uts_pbp.Model.User;
 
-public class userPreferences {
+public class UserPreferences {
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     Context context;
@@ -14,8 +14,9 @@ public class userPreferences {
     public static final String IS_LOGIN = "isLogin";
     public static final String KEY_EMAIL = "email";
     public static final String KEY_PASSWORD = "password";
+    private String nama, nomor_telepon;
 
-    public userPreferences(Context context){
+    public UserPreferences(Context context){
         this.context = context;
 //        penamaan bebas
         sharedPreferences = context.getSharedPreferences("userPreferences", Context.MODE_PRIVATE);
@@ -32,14 +33,20 @@ public class userPreferences {
         editor.commit();
     }
 
-    public user getUserLogin(){
+    public User getUserLogin(){
         //mengembalikan object user untuk menampilkan data user jika user udah login
         String email, password;
 
         email = sharedPreferences.getString(KEY_EMAIL, null);
         password = sharedPreferences.getString(KEY_PASSWORD, null);
 
-        return new user(email, password);
+//        if(email.equals("arya@gmail.com") && password.equals("arya")){
+//            nomor_telepon
+//        }else if(email.equals("jona@gmail.com") && password.equals("jona")){
+//
+//        }
+
+        return new User(email, password);
     }
 
     public boolean checkLogin(){

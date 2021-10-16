@@ -43,14 +43,6 @@ public class homeAplikasi extends AppCompatActivity {
             }
 
         });
-
-
-
-
-
-
-
-
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =

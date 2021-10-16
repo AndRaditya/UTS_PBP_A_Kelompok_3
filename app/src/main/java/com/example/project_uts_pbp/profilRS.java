@@ -11,15 +11,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class profilRS extends AppCompatActivity {
 
     @Override
-    public void setTitle(int titleId) {
-        super.setTitle(titleId);
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profilrs);
-
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         // bottomNavigationView.setSelectedItemId(R.id.todolist);
 //        bottomNavigationView.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener);
