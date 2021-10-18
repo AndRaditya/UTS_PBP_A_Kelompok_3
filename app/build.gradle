@@ -7,8 +7,9 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.gd6_geolocation_a_10144"
-        minSdk 28
+        applicationId "com.example.project_uts_pbp"
+        // applicationId "com.example.gd6_geolocation_a_10144"
+        minSdk 27
         targetSdk 31
         versionCode 1
         versionName "1.0"

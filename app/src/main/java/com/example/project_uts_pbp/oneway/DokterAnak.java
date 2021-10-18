@@ -1,6 +1,6 @@
-package com.example.project_uts_pbp;
+package com.example.project_uts_pbp.oneway;
 
-public class Dokter    {
+public class DokterAnak    {
 
     public String namadokter;
     public String poliklinik;
@@ -14,9 +14,8 @@ public class Dokter    {
     public String shift;
 
 
-    public Pegawai(String namadokter, String poliklinik, String minggu, String senin, String selasa, String rabu, String kamis, String jumat,
+    public DokterAnak(String namadokter, String poliklinik, String minggu, String senin, String selasa, String rabu, String kamis, String jumat,
                     String sabtu, String shift)
-
     {   
         this.namadokter = namadokter;
         this.poliklinik = poliklinik;

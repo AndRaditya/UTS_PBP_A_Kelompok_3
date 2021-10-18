@@ -1,4 +1,10 @@
 package com.example.project_uts_pbp;
+import static com.example.project_uts_pbp.myApplication.CHANNEL_1_ID;
+
+import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -8,11 +14,13 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.project_uts_pbp.Adapter.PendaftaranAdapter;
-import com.example.project_uts_pbp.Model.Pendaftaran;
-import com.example.project_uts_pbp.Database.DatabasePendaftaran;
+import com.example.project_uts_pbp.adapter.PendaftaranAdapter;
+import com.example.project_uts_pbp.model.Pendaftaran;
+import com.example.project_uts_pbp.database.DatabasePendaftaran;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +30,7 @@ public class InputDataPendaftaran extends AppCompatActivity {
             tanggalPeriksa, keluhan, jenisKelamin, kategoriPenyakit;
     private Button btnDaftarOnline;
     private RecyclerView rv_JadwalAnda;
+    private NotificationManagerCompat notificationManager;
 
     private List<Pendaftaran> pendaftaranList;
     private PendaftaranAdapter pendaftaranAdapter;
@@ -30,6 +39,8 @@ public class InputDataPendaftaran extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pendaftaran);
+
+        notificationManager = NotificationManagerCompat.from(this);
 
         rv_JadwalAnda = findViewById(R.id.rv_JadwalAnda);
         namaPendaftaran = findViewById(R.id.namaPendaftaran);
@@ -117,5 +128,32 @@ public class InputDataPendaftaran extends AppCompatActivity {
         }
         GetPendaftaran getPendaftarans = new GetPendaftaran();
         getPendaftarans.execute();
+    }
+
+    public void sendOnChannel1(View view){
+        String message = namaPendaftaran.getText().toString();
+
+        Intent activityIntent = new Intent(this, InputDataPendaftaran.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, activityIntent, 0);
+
+        Intent broadcastIntent = new Intent(this, notificationReceiver.class);
+        broadcastIntent.putExtra("toastMessage",message);
+        PendingIntent actionIntent = PendingIntent.getBroadcast(this, 0, broadcastIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
+        Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
+            .setSmallIcon(R.drawable.ic_baseline_looks_one_24)
+            .setContentTitle("Pendaftaran Anda Telah Berhasil")
+            .setContentText(message + " telah terdaftar")
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+            .setColor(Color.BLUE)
+            .setContentIntent(contentIntent)
+            .setAutoCancel(true)
+            .setOnlyAlertOnce(true)
+            .addAction(R.mipmap.ic_launcher, "Toast", actionIntent)
+            .build();
+        
+        notificationManager.notify(1,notification);
     }
 }

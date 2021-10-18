@@ -1,8 +1,4 @@
-package com.example.project_uts_pbp.Model;
-
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+package com.example.project_uts_pbp.model;
 
 public class User {
     private String email;

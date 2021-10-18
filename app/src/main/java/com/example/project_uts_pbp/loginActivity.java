@@ -1,14 +1,14 @@
 package com.example.project_uts_pbp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.project_uts_pbp.Preferences.UserPreferences;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.project_uts_pbp.preferences.UserPreferences;
 import com.google.android.material.button.MaterialButton;
 
 public class loginActivity extends AppCompatActivity {

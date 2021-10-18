@@ -15,8 +15,8 @@ public class profilRS extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profilrs);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        // bottomNavigationView.setSelectedItemId(R.id.todolist);
-//        bottomNavigationView.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener);
+        // bottomNavigationView.setSelectedItemId(R.id.homeMenu);
+       bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =

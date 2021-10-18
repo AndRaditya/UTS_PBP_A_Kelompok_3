@@ -1,8 +1,7 @@
-package com.example.project_uts_pbp.Database;
+package com.example.project_uts_pbp.database;
 
 import android.content.Context;
 import androidx.room.Room;
-import com.example.project_uts_pbp.Database.AppDatabase;
 
 public class DatabasePendaftaran {
     private Context context;

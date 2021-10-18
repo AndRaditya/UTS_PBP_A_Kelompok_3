@@ -1,15 +1,15 @@
  package com.example.project_uts_pbp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.project_uts_pbp.Adapter.PendaftaranAdapter;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.project_uts_pbp.adapter.PendaftaranAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
  public class homeAplikasi extends AppCompatActivity {
@@ -20,6 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.home_aplikasi);
 
         btnEmergency = findViewById(R.id.btnEmergency);
         btnDaftar = findViewById(R.id.btnDaftar);
@@ -27,8 +28,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
         btnLayananDokter = findViewById(R.id.btnLayananDokter);
         btnProfilRumahSakit = findViewById(R.id.btnProfilRumahSakit);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation); /*masih error*/
-        // bottomNavigationView.setSelectedItemId(R.id.profileMenu);
-        // bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
+        bottomNavigationView.setSelectedItemId(R.id.homeMenu);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
         btnProfilRumahSakit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +62,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
         btnEmergency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(homeAplikasi.this, emergencyGeolocation.class));
+                startActivity(new Intent(homeAplikasi.this, emergencyHubungi.class));
                 finish();
             }
         });

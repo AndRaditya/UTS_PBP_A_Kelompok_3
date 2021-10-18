@@ -1,12 +1,17 @@
 package com.example.project_uts_pbp;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
-public class emergencyGeolocation extends AppCompatActivity{
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class emergencyHubungi extends AppCompatActivity{
 
     private Button btnLokasiEmergency;
 
@@ -16,34 +21,34 @@ public class emergencyGeolocation extends AppCompatActivity{
 
         btnLokasiEmergency = findViewById(R.id.btnLokasiEmergency);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView
+         bottomNavigationView.setSelectedItemId(R.id.homeMenu);
+         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
         btnLokasiEmergency.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(emergenyGeolocation.this, emergencyLocation.classs));
+                startActivity(new Intent(emergencyHubungi.this, emergencyGeolocation.class));
             }
         });
-
-        BottomNavigationView.OnNavigationItemSelectedListener navListener =
-                    new BottomNavigationView.OnNavigationItemSelectedListener() {
-                        @Override
-                        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                            switch (item.getItemId()) {
-                                case R.id.homeMenu:
-                                    startActivity(new Intent(MainActivity.this, MainActivity.class));
-                                    finish();
-                                    break;
-                                case R.id.profileMenu:
-                                    startActivity(new Intent(MainActivity.this, profilePribadi.class));
-                                    finish();
-                                    break;
-                            }
-                            return true;
-                        }
-                    };
-//        });
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    switch (item.getItemId()) {
+                        case R.id.homeMenu:
+                            startActivity(new Intent(emergencyHubungi.this, homeAplikasi.class));
+                            finish();
+                            break;
+                        case R.id.profileMenu:
+                            startActivity(new Intent(emergencyHubungi.this, profilePribadi.class));
+                            finish();
+                            break;
+                    }
+                    return true;
+                }
+            };
 
 }
 

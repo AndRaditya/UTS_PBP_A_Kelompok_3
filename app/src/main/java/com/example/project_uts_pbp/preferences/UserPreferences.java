@@ -1,9 +1,9 @@
-package com.example.project_uts_pbp.Preferences;
+package com.example.project_uts_pbp.preferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.project_uts_pbp.Model.User;
+import com.example.project_uts_pbp.model.User;
 
 public class UserPreferences {
     SharedPreferences sharedPreferences;

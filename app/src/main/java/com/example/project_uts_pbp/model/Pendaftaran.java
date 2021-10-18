@@ -1,4 +1,4 @@
-package com.example.project_uts_pbp.Model;
+package com.example.project_uts_pbp.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "pendaftaran")
 public class Pendaftaran {
     @PrimaryKey(autoGenerate = true)
+    /*tambahan*/ private int id;
     @ColumnInfo(name = "namaPendaftar")
     private String namaPendaftar;
 
@@ -28,6 +29,13 @@ public class Pendaftaran {
     @ColumnInfo(name = "kategoriPenyakitPendaftar")
     private String kategoriPenyakitPendaftar;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getNamaPendaftar() {
         return namaPendaftar;
