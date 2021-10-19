@@ -19,8 +19,7 @@ public class PendaftaranAdapter extends RecyclerView.Adapter<PendaftaranAdapter.
     private List<Pendaftaran> pendaftaranList;
     private Context context;
 
-
-    public PendaftaranAdapter(List<Pendaftaran> todoList, Context context){
+    public PendaftaranAdapter(List<Pendaftaran> pendaftaranList, Context context){
         this.pendaftaranList = pendaftaranList;
         this.context = context;
         notifyDataSetChanged();

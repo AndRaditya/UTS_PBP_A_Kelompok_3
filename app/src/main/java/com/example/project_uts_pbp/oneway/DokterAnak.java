@@ -69,9 +69,4 @@ public class DokterAnak    {
     public String getShift()  {return shift; }
 
     public void setShift(String shift) { this.shift= shift; }
-
-    
-
-
-
 }

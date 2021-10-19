@@ -119,8 +119,7 @@
         android:layout_width="100dp"
         android:layout_height="48dp"
         android:layout_marginTop="15dp"
-        android:text="Daftar" 
-        android:onClick="sendOnChannel1"/>
+        android:text="Daftar" />
 
     <Button
         android:id="@+id/btnKembali"

@@ -8,7 +8,6 @@ android {
 
     defaultConfig {
         applicationId "com.example.project_uts_pbp"
-        // applicationId "com.example.gd6_geolocation_a_10144"
         minSdk 27
         targetSdk 31
         versionCode 1

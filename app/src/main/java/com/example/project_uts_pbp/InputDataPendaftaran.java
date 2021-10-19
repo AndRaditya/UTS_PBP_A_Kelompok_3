@@ -19,16 +19,15 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project_uts_pbp.adapter.PendaftaranAdapter;
-import com.example.project_uts_pbp.model.Pendaftaran;
 import com.example.project_uts_pbp.database.DatabasePendaftaran;
+import com.example.project_uts_pbp.model.Pendaftaran;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class InputDataPendaftaran extends AppCompatActivity {
     private EditText namaPendaftaran, tanggalLahir, nomorHp,
             tanggalPeriksa, keluhan, jenisKelamin, kategoriPenyakit;
-    private Button btnDaftarOnline;
+    private Button btnDaftarOnline, btnKembali;
     private RecyclerView rv_JadwalAnda;
     private NotificationManagerCompat notificationManager;
 
@@ -51,6 +50,7 @@ public class InputDataPendaftaran extends AppCompatActivity {
         jenisKelamin = findViewById(R.id.jenisKelamin);
         kategoriPenyakit = findViewById(R.id.kategoriPenyakit);
         btnDaftarOnline = findViewById(R.id.btnDaftarOnline);
+        btnKembali = findViewById(R.id.btnKembali);
 
         btnDaftarOnline.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,14 +60,23 @@ public class InputDataPendaftaran extends AppCompatActivity {
                      && !keluhan.getText().toString().isEmpty() && !jenisKelamin.getText().toString().isEmpty()
                      && !kategoriPenyakit.getText().toString().isEmpty()){
                     addPendaftaran();
+                    sendOnChannel1(view);
                 }
                 else{
                     Toast.makeText(InputDataPendaftaran.this, "Belum diisi tuh", Toast.LENGTH_SHORT).show();
                 }
             }
         });
-        getPendaftaran();
-        pendaftaranList = new ArrayList<>();
+
+        btnKembali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(InputDataPendaftaran.this, homeAplikasi.class));
+                finish();
+            }
+        });
+//        pendaftaranList = new ArrayList<>();
+//        getPendaftaran();
     }
 
     private void addPendaftaran(){
@@ -102,33 +111,33 @@ public class InputDataPendaftaran extends AppCompatActivity {
             protected void onPostExecute(Void unused){
                 super.onPostExecute(unused);
                 Toast.makeText(InputDataPendaftaran.this, "Berhasil menambahkan data", Toast.LENGTH_SHORT).show();
-                getPendaftaran();
+//                getPendaftaran();
             }
         }
         AddTodo addTodo = new AddTodo( );
         addTodo.execute();
     }
 
-    private void getPendaftaran(){
-        class GetPendaftaran extends AsyncTask<Void, Void, List<Pendaftaran>>{
-            @Override
-            protected List<Pendaftaran> doInBackground(Void... voids){
-                List<Pendaftaran> pendaftaranList = DatabasePendaftaran.getInstance(getApplicationContext())
-                        .getDatabase()
-                        .pendaftaranDao()
-                        .getAll();
-                return pendaftaranList;
-            }
-            @Override
-            protected void onPostExecute(List<Pendaftaran> pendaftarans){
-                super.onPostExecute(pendaftarans);
-                pendaftaranAdapter = new PendaftaranAdapter(pendaftarans, InputDataPendaftaran.this);
-                rv_JadwalAnda.setAdapter(pendaftaranAdapter);
-            }
-        }
-        GetPendaftaran getPendaftarans = new GetPendaftaran();
-        getPendaftarans.execute();
-    }
+//    private void getPendaftaran(){
+//        class GetPendaftaran extends AsyncTask<Void, Void, List<Pendaftaran>>{
+//            @Override
+//            protected List<Pendaftaran> doInBackground(Void... voids){
+//                List<Pendaftaran> pendaftaranList = DatabasePendaftaran.getInstance(getApplicationContext())
+//                        .getDatabase()
+//                        .pendaftaranDao()
+//                        .getAll();
+//                return pendaftaranList;
+//            }
+//            @Override
+//            protected void onPostExecute(List<Pendaftaran> pendaftarans){
+//                super.onPostExecute(pendaftarans);
+//                pendaftaranAdapter = new PendaftaranAdapter(pendaftarans, InputDataPendaftaran.this);
+//                rv_JadwalAnda.setAdapter(pendaftaranAdapter);
+//            }
+//        }
+//        GetPendaftaran getPendaftarans = new GetPendaftaran();
+//        getPendaftarans.execute();
+//    }
 
     public void sendOnChannel1(View view){
         String message = namaPendaftaran.getText().toString();

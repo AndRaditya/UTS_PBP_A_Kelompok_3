@@ -1,235 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".homeAplikasi">
+    android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/monument"
-            android:layout_width="100dp"
+
+        <LinearLayout
+            android:layout_width="400dp"
             android:layout_height="100dp"
-            android:src="@drawable/rumahsakit"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView"
-            app:layout_constraintHorizontal_bias="0.568"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.223" />
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="ATMAJAYA MAKASSAR"
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.168"
-            app:layout_constraintStart_toEndOf="@+id/monument"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.272" />
+            <ImageView
+                android:id="@+id/monument"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="100dp"
+                android:paddingTop="-100dp"
+                android:src="@drawable/rumahsakit" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="RUMAH SAKIT"
-            android:textColor="@color/black"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.436"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="RUMAH SAKIT"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="RUMAH SAKIT"
-            android:textColor="@color/black"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.436"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-80dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="10dp"
+                android:text="ATMAJAYA MAKASSAR"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/btnEmergency"
-            android:layout_width="81dp"
-            android:layout_height="85dp"
-            android:src="@drawable/mobil"
-            android:backgroundTint="#FF0000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.478"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.868" />
+        <LinearLayout
+            android:layout_width="381dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="-389dp"
+            android:layout_marginTop="150dp"
+            android:gravity="center_horizontal">
 
-        <ImageButton
-            android:id="@+id/btnProfilRumahSakit"
-            android:layout_width="118dp"
-            android:layout_height="127dp"
-            android:src="@drawable/tasrs1"
-            android:clickable="true"
-            android:backgroundTint="@color/mapbox_blue"
-            android:foreground="?android:attr/selectableItemBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnDaftar"
-            app:layout_constraintHorizontal_bias="0.565"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/monument"
-            app:layout_constraintVertical_bias="0.071"
-            android:onClick="@{activity.btnHome}" />
-
-        <ImageButton
-            android:id="@+id/btnDaftar"
-            android:layout_width="118dp"
-            android:layout_height="127dp"
-            android:src="@drawable/woman"
-            android:backgroundTint="@color/mapbox_blue"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.74"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.442" />
-
-        <ImageButton
-            android:id="@+id/btnJadwalAnda"
-            android:layout_width="118dp"
-            android:layout_height="127dp"
-            android:src="@drawable/notes"
-            android:backgroundTint="@color/mapbox_blue"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnDaftar"
-            app:layout_constraintHorizontal_bias="0.565"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/monument"
-            app:layout_constraintVertical_bias="0.484" />
-
-        <ImageButton
-            android:id="@+id/btnLayananDokter"
-            android:layout_width="118dp"
-            android:layout_height="127dp"
-            android:src="@drawable/stetoskop"
-            android:backgroundTint="@color/mapbox_blue"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.74"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.69" />
-
-        <TextView
-            android:id="@+id/ProfilRumahSakit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Profil Rumah Sakit"
-            android:textColor="@color/white"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/btnProfilRumahSakit"
-            app:layout_constraintEnd_toStartOf="@+id/btnDaftar"
-            app:layout_constraintHorizontal_bias="0.556"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/btnProfilRumahSakit"
-            app:layout_constraintVertical_bias="0.936" />
-
-        <TextView
-            android:id="@+id/Pendaftaran"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Pendaftaran"
-            android:textColor="@color/white"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/btnProfilRumahSakit"
-            app:layout_constraintEnd_toEndOf="@+id/btnDaftar"
-            app:layout_constraintHorizontal_bias="0.906"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/btnProfilRumahSakit"
-            app:layout_constraintVertical_bias="0.927" />
-
-        <TextView
-            android:id="@+id/JadwalAnda"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Jadwal Anda"
-            android:textColor="@color/white"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/btnJadwalAnda"
-            app:layout_constraintEnd_toEndOf="@+id/btnJadwalAnda"
-            app:layout_constraintHorizontal_bias="0.562"
-            app:layout_constraintStart_toStartOf="@+id/btnJadwalAnda"
-            app:layout_constraintTop_toTopOf="@+id/btnJadwalAnda"
-            app:layout_constraintVertical_bias="0.9" />
-
-        <TextView
-            android:id="@+id/JadwalDokter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Jadwal Dokter"
-            android:textColor="@color/white"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/btnJadwalAnda"
-            app:layout_constraintEnd_toEndOf="@+id/btnLayananDokter"
-            app:layout_constraintHorizontal_bias="0.91"
-            app:layout_constraintStart_toStartOf="@+id/btnJadwalAnda"
-            app:layout_constraintTop_toTopOf="@+id/btnJadwalAnda"
-            app:layout_constraintVertical_bias="0.9" />
-
-        <TextView
-            android:id="@+id/Emergency"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Emergency"
-            android:textColor="@color/white"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnEmergency"
-            app:layout_constraintHorizontal_bias="0.901"
-            app:layout_constraintStart_toStartOf="@+id/btnJadwalAnda"
-            app:layout_constraintTop_toTopOf="@+id/btnLayananDokter"
-            app:layout_constraintVertical_bias="0.687" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/alamatrumahsakit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-10dp"
+                android:text="Jl. Jonathan Pratama no 69, Kecamatan Yogyakarta, Nusa Pintar "
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="440dp"
+            android:layout_marginLeft="-386dp"
+            android:layout_marginTop="200dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnProfilRumahSakit"
+                android:layout_width="118dp"
+                android:layout_height="127dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/tasrs1" />
+
+            <TextView
+                android:id="@+id/Profil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-105dp"
+                android:layout_marginTop="160dp"
+                android:text="Profil Rumah Sakit"
+                android:textColor="@color/black"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnDaftar"
+                android:layout_width="118dp"
+                android:layout_height="127dp"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="21dp"
+                android:src="@drawable/woman" />
+
+            <TextView
+                android:id="@+id/Pendaftaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-90dp"
+                android:layout_marginTop="-52dp"
+                android:text="Pendaftaran"
+                android:textColor="@color/black"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnJadwalAnda"
+                android:layout_width="118dp"
+                android:layout_height="127dp"
+                android:layout_marginLeft="-303dp"
+                android:layout_marginTop="200dp"
+                android:src="@drawable/notes" />
+
+            <TextView
+                android:id="@+id/JadwalAnda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-90dp"
+                android:layout_marginTop="120dp"
+                android:text="Jadwal Anda"
+                android:textColor="@color/black"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+
+            <ImageButton
+                android:id="@+id/btnLayananDokter"
+                android:layout_width="118dp"
+                android:layout_height="127dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="200dp"
+                android:src="@drawable/stetoskop" />
+
+            <TextView
+                android:id="@+id/JadwalDokter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-96dp"
+                android:layout_marginTop="120dp"
+                android:text="Jadwal Dokter"
+                android:textColor="@color/black"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnEmergency"
+                android:layout_width="81dp"
+                android:layout_height="85dp"
+                android:layout_marginLeft="-183dp"
+                android:layout_marginTop="328dp"
+                android:src="@drawable/mobil" />
+
+
+            <TextView
+                android:id="@+id/Emergency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="-70dp"
+                android:layout_marginTop="205dp"
+                android:text="Emergency"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/bottom_nav_menu"
-        tools:layout_editor_absoluteX="0dp" />
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout">
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

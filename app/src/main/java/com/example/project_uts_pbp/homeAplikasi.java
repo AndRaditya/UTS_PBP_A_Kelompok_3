@@ -1,6 +1,6 @@
  package com.example.project_uts_pbp;
 
-import android.content.Intent;
+ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.project_uts_pbp.adapter.PendaftaranAdapter;
+import com.example.project_uts_pbp.oneway.tampilDokterAnak;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
  public class homeAplikasi extends AppCompatActivity {
@@ -21,6 +21,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_aplikasi);
+        setTitle("Home Aplikasi");
 
         btnEmergency = findViewById(R.id.btnEmergency);
         btnDaftar = findViewById(R.id.btnDaftar);
@@ -48,17 +49,17 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
         btnJadwalAnda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(homeAplikasi.this, PendaftaranAdapter.class));
+                startActivity(new Intent(homeAplikasi.this, showDetailPendaftaran.class));
                 finish();
             }
         });
-//        btnLayananDokter.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(homeAplikasi.this, profilRS.class));
-//                finish();
-//            }
-//        });
+        btnLayananDokter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(homeAplikasi.this, tampilDokterAnak.class));
+                finish();
+            }
+        });
         btnEmergency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
