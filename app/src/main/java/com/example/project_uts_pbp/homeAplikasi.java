@@ -9,7 +9,6 @@ import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.project_uts_pbp.oneway.tampilDokterAnak;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
  public class homeAplikasi extends AppCompatActivity {
@@ -56,7 +55,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
         btnLayananDokter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(homeAplikasi.this, tampilDokterAnak.class));
+                startActivity(new Intent(homeAplikasi.this, jadwalLayananUtama.class));
                 finish();
             }
         });

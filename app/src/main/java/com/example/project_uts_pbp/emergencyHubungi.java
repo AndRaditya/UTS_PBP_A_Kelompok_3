@@ -18,10 +18,10 @@ public class emergencyHubungi extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_emergency);
-
+        setTitle("Emergency");
         btnLokasiEmergency = findViewById(R.id.btnLokasiEmergency);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-         bottomNavigationView.setSelectedItemId(R.id.homeMenu);
+//         bottomNavigationView.setSelectedItemId(R.id.homeMenu);
          bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
         btnLokasiEmergency.setOnClickListener(new View.OnClickListener(){

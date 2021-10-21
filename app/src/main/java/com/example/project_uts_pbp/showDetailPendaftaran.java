@@ -29,11 +29,11 @@ public class showDetailPendaftaran extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_detail_pendaftaran);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation); /*masih error*/
-        bottomNavigationView.setSelectedItemId(R.id.homeMenu);
+//        bottomNavigationView.setSelectedItemId(R.id.homeMenu);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         rv_JadwalAnda = findViewById(R.id.rv_JadwalAnda);
         rv_JadwalAnda.setLayoutManager(new LinearLayoutManager(this));
-
+        setTitle("Jadwal Pendaftaran Anda");
         getPendaftaran();
         pendaftaranList = new ArrayList<>();
     }

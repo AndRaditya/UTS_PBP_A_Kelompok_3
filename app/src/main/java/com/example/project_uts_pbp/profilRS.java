@@ -13,9 +13,10 @@ public class profilRS extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Profil Rumah Sakit");
         setContentView(R.layout.profilrs);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        // bottomNavigationView.setSelectedItemId(R.id.homeMenu);
+//         bottomNavigationView.setSelectedItemId(R.id.homeMenu);
        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
 
     }

@@ -38,6 +38,7 @@ public class InputDataPendaftaran extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pendaftaran);
+        setTitle("Pendaftaran");
 
         notificationManager = NotificationManagerCompat.from(this);
 
@@ -151,7 +152,7 @@ public class InputDataPendaftaran extends AppCompatActivity {
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
-            .setSmallIcon(R.drawable.ic_baseline_looks_one_24)
+//            .setSmallIcon(R.drawable.ic_baseline_looks_one_24)
             .setContentTitle("Pendaftaran Anda Telah Berhasil")
             .setContentText(message + " telah terdaftar")
             .setPriority(NotificationCompat.PRIORITY_HIGH)

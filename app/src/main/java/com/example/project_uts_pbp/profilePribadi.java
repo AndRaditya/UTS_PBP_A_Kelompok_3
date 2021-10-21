@@ -25,6 +25,7 @@ public class profilePribadi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_pribadi);
+        setTitle("Profil Anda");
 
         userPreferences = new UserPreferences(profilePribadi.this);
         namaProfile = findViewById(R.id.namaProfile);

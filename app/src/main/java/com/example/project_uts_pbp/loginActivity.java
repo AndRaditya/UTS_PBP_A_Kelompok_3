@@ -20,6 +20,7 @@ public class loginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        setTitle("Silahkan Masuk");
 
         userPreferences = new UserPreferences(loginActivity.this);
 

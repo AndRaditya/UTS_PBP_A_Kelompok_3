@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".myApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,9 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project_UTS_PBP">
         <activity
-            android:name=".showDetailPendaftaran"
+            android:name=".oneway.tampilDokterMata"
             android:exported="true" />
-        <!-- <activity android:name=".splashScreen" android:theme="@style/SplashScreenStyle"> -->
+        <activity
+            android:name=".showDetailPendaftaran"
+            android:exported="true" /> <!-- <activity android:name=".splashScreen" android:theme="@style/SplashScreenStyle"> -->
         <activity
             android:name=".splashScreen"
             android:exported="true">
@@ -29,35 +32,34 @@
         </activity>
         <activity
             android:name=".loginActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".homeAplikasi"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".homePage"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".emergencyHubungi"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".emergencyGeolocation"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".profilePribadi"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".profilRS"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".InputDataPendaftaran"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".oneway.tampilDokterAnak"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".jadwalLayananUtama"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
     </application>
 
 </manifest>
